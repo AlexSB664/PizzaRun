@@ -2,7 +2,9 @@ package com.example.ezegale.pizzaruneable;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.admin.ConnectEvent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -15,12 +17,18 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.text.CollationElementIterator;
+import java.util.List;
+import java.util.Locale;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    public static GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
@@ -53,8 +61,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+
+        LatLng sydney = new LatLng(32.5295151,-116.9864911);
+        //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 12.0f));
+        //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(sydney.latitude,sydney.longitude));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("El tec :v"));
+        mMap.setMaxZoomPreference(23);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+
     }
+
+    public static void onMapReady(GoogleMap googleMap,double la,double lo) {
+        mMap = googleMap;
+        mMap.clear();
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(la, lo);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Ubicacion Actual"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        float zoomLevel = 16.0f; //This goes up to 21
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel));
+        //mMap.setMaxZoomPreference(45);
+
+
+    }
+
 }
