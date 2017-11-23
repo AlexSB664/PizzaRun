@@ -4,27 +4,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/Inicio"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/pizza"
             android:title="Inicio" />
         <item
             android:id="@+id/IdPago"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/dinero"
             android:title="Pago" />
         <item
             android:id="@+id/IdTusPedidos"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/pizza"
             android:title="Tus pedidos" />
         <item
             android:id="@+id/IdPromociones"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/pizza"
             android:title="Promociones" />
         <item
             android:id="@+id/IdAyuda"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/pizza"
             android:title="Ayuda" />
         <item
             android:id="@+id/IdTusFavoritps"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/pizza"
             android:title="Favoritos" />
         <item
             android:id="@+id/IdConfiguracion"
