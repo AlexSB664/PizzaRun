@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/51f3553afc6c38fc9ad415ca75972b70b6dd3ba1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_38a4f9c6ecbee28c0f8f5b403a82bf029802adab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_0090e4e06334a3bea6c9e26892081cbb3b75d1fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/298463708943ca7e081393f6db244f0197de8fce/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_e9dafbf51a9255f5c8fa4e14f265dc927047abe7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/45fdf1cb9c067e691f8cad960b43dee5438e4056/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_f4a0ab80a575e55eaa9e4b5e9bdfde1d18e67b14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/102df65e4f7891f2add0a1a0317e470859faf4e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_b28f0d6d8e8a30365b4ba8ab6a86c4276100b4fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/63a10085bdcb886840b3f276aae3cd8770c7bbe9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_bb3a751c769e7b6c634e2108c29b81d4899bed30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/75458ffbefd884e9aecb9e4da03a7ca544b3a858/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_76c57295a2a8f60b348de7746834d83061e4ae16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/ec2a988edf8a90a9a47d756a69871a9f095e2232/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_9580b0ef95a6ac88a553a5636835e961ebfef640.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_e10fde69e2387b0bdb7ea09c59419f3341d8008d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/9b8af8a72dbe7b158b5ec799764fc92c2d3eea3a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_3ec15790bd1faf1b7c4ed7023f0501623192ec62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/3f3d6089c6cd75ff29e7cbc35fe4fa333ad6b8e3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_c91ef6faadf170e716b53046419f14a16ac1675e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/0dd2b3f3e77eb3e58c0dad400055474d7be0ceeb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_3cb0b752bebeaefd138089ce652a9cb27e44794c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/30b99229c1d79dd193b1f039f1a08e7751391369/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_2d00d8c6c4b23e593edf9b4dacf86753678fd6b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/a87a24afb41070c866813f8b24d23d0486719c8f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_c5dabe7f6eaee4a5a41ddfb4f3cfed43b81b055c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/alex/.android/build-cache/a749d2a7f1181079e5868b152f661219635828ca/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/media/alex/UUI/PizzaRuneable/app/build/intermediates/pre-dexed/debug/classes_3eaa4f58c49b847ef0178c97cc5cd785da12c967.jar" />
+    </item>
+
+</items>

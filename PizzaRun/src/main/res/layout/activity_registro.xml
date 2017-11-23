@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ezegale.pizzaruneable.RegistroActivity"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:fontFamily="casual"
+     android:text="Registrarse"
+     android:textAlignment="center"
+     android:textSize="24sp"
+     android:textStyle="bold" />
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="match_parent"
+       android:layout_height="@android:dimen/thumbnail_height"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:scaleType="fitCenter"
+       app:srcCompat="@drawable/logo_pizzarun" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:text="Nombre:"
+       android:textSize="20sp" />
+
+   <EditText
+       android:id="@+id/nameNewUsertxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:inputType="text"
+       android:selectAllOnFocus="false"
+       android:singleLine="true"
+       android:textAlignment="viewStart"
+       android:textSize="20sp" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:text="Usuario:"
+       android:fontFamily="casual"
+       android:textSize="20sp" />
+
+   <EditText
+       android:id="@+id/usernameNewUsertxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:inputType="text"
+       android:singleLine="true"
+       android:textSize="20sp" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:text="Correo:"
+       android:textSize="20sp" />
+
+   <EditText
+       android:id="@+id/emailNewUserTxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:inputType="textEmailSubject"
+       android:singleLine="true"
+       android:textSize="20sp" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:text="Contraseña:"
+       android:textSize="20sp" />
+
+   <EditText
+       android:id="@+id/passwordNewUserTxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:ems="10"
+       android:fontFamily="casual"
+       android:inputType="textPassword"
+       android:singleLine="true" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:inputType="phone"
+       android:text="Telefono:"
+       android:textSize="20sp" />
+
+   <EditText
+       android:id="@+id/numeroUserNameTxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:inputType="phone"
+       android:singleLine="true"
+       android:textSize="20sp" />
+
+   <Button
+       android:id="@+id/btn_Registrarse"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:fontFamily="casual"
+       android:background="@android:color/holo_red_light"
+       android:elevation="0dp"
+       android:text="Crear Cuenta"
+       android:textColor="@color/colorPrimaryDark"
+       android:textSize="20sp" />
+  </LinearLayout>
+ </ScrollView>
+
+</LinearLayout>
