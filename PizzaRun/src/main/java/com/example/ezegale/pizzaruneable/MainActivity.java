@@ -3,6 +3,7 @@ package com.example.ezegale.pizzaruneable;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -20,17 +21,29 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Inicio.OnFragmentInteractionListener,Pago.OnFragmentInteractionListener, TusPedidos.OnFragmentInteractionListener,Promociones.OnFragmentInteractionListener,Ayuda.OnFragmentInteractionListener,TusFavoritos.OnFragmentInteractionListener,Configuracion.OnFragmentInteractionListener {
+        implements CerrarSession.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener, Inicio.OnFragmentInteractionListener,Pago.OnFragmentInteractionListener, TusPedidos.OnFragmentInteractionListener,Promociones.OnFragmentInteractionListener,Ayuda.OnFragmentInteractionListener,TusFavoritos.OnFragmentInteractionListener,Configuracion.OnFragmentInteractionListener {
 
+    private static final String STRING_PREFERENCES = "ezegale.pizzaruneable";
+    private static final String STRING_LINK= "NO";
     private Button mapa;
+
+    public void GuardarURL(){
+        SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
+
+        preferences.edit().putString(STRING_LINK, "NO").apply();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         MyLocationListener mlocListener = new MyLocationListener();
         mlocListener.setMainActivity(this);
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -63,9 +76,96 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0){
                 Intent inten2 = new Intent(MainActivity.this,MapsActivity.class);
                 startActivity(inten2);
+
             }
         });
 
+        /*ImageButton btnaceituna = (ImageButton) findViewById(R.id.BtnAceituna);
+        ImageButton btncebolla = (ImageButton) findViewById(R.id.BtnCebolla);
+        ImageButton btnchampinon = (ImageButton) findViewById(R.id.BtnChampiñon);
+        ImageButton btnchile = (ImageButton) findViewById(R.id.BtnChile);
+        ImageButton btnjamon = (ImageButton) findViewById(R.id.BtnJamon);
+        ImageButton btnpina = (ImageButton) findViewById(R.id.BtnPina);
+        ImageButton btnpeperoni = (ImageButton) findViewById(R.id.BtnPeperoni);
+        ImageButton btnqueso = (ImageButton) findViewById(R.id.BtnQueso);
+        ImageButton btnsalchicha = (ImageButton) findViewById(R.id.BtnSalchicha);
+        ImageButton btntocino = (ImageButton) findViewById(R.id.BtnTocino);
+        final ImageView aceituna = (ImageView) findViewById(R.id.imageView);
+        final ImageView cebolla = (ImageView) findViewById(R.id.imageView2);
+        final ImageView champinon = (ImageView) findViewById(R.id.imageView5);
+        final ImageView chile = (ImageView) findViewById(R.id.imageView7);
+        final ImageView jamon = (ImageView) findViewById(R.id.imageView6);
+        final ImageView pina = (ImageView) findViewById(R.id.imageView8);
+        final ImageView peperoni = (ImageView) findViewById(R.id.imageView4);
+        final ImageView queso = (ImageView) findViewById(R.id.imageView9);
+        final ImageView salchicha = (ImageView) findViewById(R.id.imageView10);
+        final ImageView tocino = (ImageView) findViewById(R.id.imageView11);
+        btnaceituna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aceituna.setVisibility(View.VISIBLE);
+            }
+        });
+        btncebolla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cebolla.setVisibility(View.VISIBLE);
+            }
+        });
+        btnchampinon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                champinon.setVisibility(View.VISIBLE);
+            }
+        });
+        btnchile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chile.setVisibility(View.VISIBLE);
+            }
+        });
+        btnaceituna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aceituna.setVisibility(View.VISIBLE);
+            }
+        });
+        btnjamon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jamon.setVisibility(View.VISIBLE);
+            }
+        });
+        btnpina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pina.setVisibility(View.VISIBLE);
+            }
+        });
+        btnpeperoni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                peperoni.setVisibility(View.VISIBLE);
+            }
+        });
+        btnqueso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                queso.setVisibility(View.VISIBLE);
+            }
+        });
+        btnsalchicha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                salchicha.setVisibility(View.VISIBLE);
+            }
+        });
+        btntocino.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tocino.setVisibility(View.VISIBLE);
+            }
+        });*/
     }
 
     @Override
@@ -114,7 +214,7 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         Boolean FragmentoSeleccionado=false;
         if (id == R.id.Inicio) {
-            fragment = new Pago();
+            fragment = new Inicio();
             FragmentoSeleccionado =true;
             mapa.setVisibility(mapa.VISIBLE);
         }
@@ -143,11 +243,14 @@ public class MainActivity extends AppCompatActivity
             fragment = new Configuracion();
             FragmentoSeleccionado =true;
             mapa.setVisibility(mapa.INVISIBLE);
-        }else if (id == R.id.nav_share) {
+        }else if (id == R.id.IdCerrarSession) {
+            fragment = new CerrarSession();
+            GuardarURL();
+            Intent inten2 = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(inten2);
+            finish();
 
-        } else if (id == R.id.nav_send) {
-
-        }
+           }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

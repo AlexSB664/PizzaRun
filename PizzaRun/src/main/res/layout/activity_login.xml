@@ -70,6 +70,7 @@
         android:layout_marginRight="20sp"
         android:ems="10"
         android:inputType="textPassword"
+        android:maxLength="16"
         android:singleLine="true" />
 
     <LinearLayout

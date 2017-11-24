@@ -20,7 +20,7 @@ import java.net.URL;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String STRING_PREFERENCES = "ezegale.pizzaruneable";
-    private static final String STRING_LINK= "URL";
+    private static final String STRING_LINK= "NO";
     private URL ul;
 
     @Override
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (error){
                     Toast.makeText(LoginActivity.this, "Compruebe los campos", Toast.LENGTH_SHORT).show();
                 }else {
-                    try {
+                   try {
                         ul = new URL("https://pizzarun-17.000webhostapp.com/LogIn.php?UrN=" +
                                 UN + "&PsW=" + UP);
 

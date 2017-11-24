@@ -19,7 +19,7 @@ import java.net.URL;
 
 public class SplashScreenActivity extends Activity {
     private static final String STRING_PREFERENCES = "ezegale.pizzaruneable";
-    private static final String STRING_LINK = "URL";
+    private static final String STRING_LINK = "NO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class SplashScreenActivity extends Activity {
                 StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
                 if (link != "NO") {
 
-                    try {
+                   try {
                         URL ul = new URL("" + link);
                         HttpURLConnection conexion = (HttpURLConnection) ul.openConnection();
                         try {

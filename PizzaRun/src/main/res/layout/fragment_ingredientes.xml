@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ezegale.pizzaruneable.Ingredientes">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/BtnAceituna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnTocino"
+        android:layout_alignStart="@+id/BtnTocino"
+        android:layout_alignTop="@+id/BtnCebolla"
+        app:srcCompat="@drawable/aceitunas"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageButton
+        android:id="@+id/BtnCebolla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnChampiñon"
+        android:layout_alignStart="@+id/BtnChampiñon"
+        android:layout_alignTop="@+id/BtnJamon"
+        app:srcCompat="@drawable/cebolla"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageButton
+        android:id="@+id/BtnJamon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnQueso"
+        android:layout_alignStart="@+id/BtnQueso"
+        android:layout_alignTop="@+id/BtnPeperoni"
+        app:srcCompat="@drawable/jamon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageButton
+        android:id="@+id/BtnPeperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnSalchicha"
+        android:layout_alignStart="@+id/BtnSalchicha"
+        android:layout_alignTop="@+id/BtnPina"
+        app:srcCompat="@drawable/peperoni"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageButton
+        android:id="@+id/BtnPina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnChile"
+        android:layout_alignStart="@+id/BtnChile"
+        android:layout_below="@+id/BtnChile"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/pina"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageButton
+        android:id="@+id/BtnQueso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/BtnChampiñon"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/queso"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageButton
+        android:id="@+id/BtnSalchicha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/BtnChile"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_toEndOf="@+id/BtnChile"
+        android:layout_toRightOf="@+id/BtnChile"
+        app:srcCompat="@drawable/salchicha"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageButton
+        android:id="@+id/BtnChampiñon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/BtnTocino"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/BtnTocino"
+        android:layout_toStartOf="@+id/BtnTocino"
+        app:srcCompat="@drawable/seta"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageButton
+        android:id="@+id/BtnTocino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/BtnChile"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        app:srcCompat="@drawable/tocino"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageButton
+        android:id="@+id/BtnChile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        app:srcCompat="@drawable/jalapeno"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="167dp"
+        android:layout_height="166dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        app:srcCompat="@drawable/pizzavacia"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView31"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        app:srcCompat="@drawable/aceitunita"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView31"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        app:srcCompat="@drawable/cebollita"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="41dp"
+        app:srcCompat="@drawable/ingrepepero"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/BtnPeperoni"
+        android:layout_alignRight="@+id/BtnPeperoni"
+        android:layout_alignTop="@+id/imageView4"
+        app:srcCompat="@drawable/champinon"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toLeftOf="@+id/BtnCebolla"
+        android:layout_toStartOf="@+id/BtnCebolla"
+        app:srcCompat="@drawable/jamoncito"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnJamon"
+        android:layout_alignStart="@+id/BtnJamon"
+        android:layout_below="@+id/imageView5"
+        android:layout_marginTop="13dp"
+        app:srcCompat="@drawable/pimienta"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:layout_toStartOf="@+id/imageView6"
+        app:srcCompat="@drawable/pinita"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView5"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_marginBottom="12dp"
+        app:srcCompat="@drawable/quesito"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView9"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:layout_toStartOf="@+id/imageView6"
+        app:srcCompat="@drawable/salchichita"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        app:srcCompat="@drawable/tocinito"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

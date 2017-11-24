@@ -66,8 +66,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 12.0f));
         //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(sydney.latitude,sydney.longitude));
         mMap.addMarker(new MarkerOptions().position(sydney).title("El tec :v"));
-        mMap.setMaxZoomPreference(23);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        float zoomLevel = (float) 16.0; //This goes up to 21
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, zoomLevel));
 
 
     }

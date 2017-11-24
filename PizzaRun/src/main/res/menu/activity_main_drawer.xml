@@ -6,10 +6,7 @@
             android:id="@+id/Inicio"
             android:icon="@drawable/pizza"
             android:title="Inicio" />
-        <item
-            android:id="@+id/IdPago"
-            android:icon="@drawable/dinero"
-            android:title="Pago" />
+
         <item
             android:id="@+id/IdTusPedidos"
             android:icon="@drawable/pizza"
@@ -19,30 +16,27 @@
             android:icon="@drawable/pizza"
             android:title="Promociones" />
         <item
-            android:id="@+id/IdAyuda"
-            android:icon="@drawable/pizza"
-            android:title="Ayuda" />
-        <item
             android:id="@+id/IdTusFavoritps"
             android:icon="@drawable/pizza"
             android:title="Favoritos" />
         <item
+            android:id="@+id/IdPago"
+            android:icon="@drawable/dinero"
+            android:title="Pago" />
+        <item
+            android:id="@+id/IdAyuda"
+            android:icon="@drawable/pizza"
+            android:title="Ayuda" />
+
+        <item
             android:id="@+id/IdConfiguracion"
             android:icon="@drawable/ic_menu_manage"
             android:title="Configuración" />
+        <item
+            android:id="@+id/IdCerrarSession"
+            android:icon="@drawable/pizza"
+            android:title="Cerrar Sesion" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
 
 </menu>
