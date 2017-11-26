@@ -9,15 +9,13 @@ import android.os.Bundle;
  */
 
 public class MyLocationListener implements LocationListener {
-    MainActivity mainActivity;
+    MapsActivity mainActivity;
 
 
 
-    public MainActivity getMainActivity() {
-        return mainActivity;
-    }
 
-    public void setMainActivity(MainActivity mainActivity) {
+
+    public void setMainActivity(MapsActivity mainActivity) {
         this.mainActivity = mainActivity;
     }
 
