@@ -45,7 +45,7 @@ public class SplashScreenActivity extends Activity {
                                     iniciarMenu();
                                 }
                             } else {
-                                Toast.makeText(SplashScreenActivity.this, "Compruebe su conexión", Toast.LENGTH_LONG).show();
+
                                 finish();
                             }
                         } catch (Exception e) {
@@ -64,6 +64,7 @@ public class SplashScreenActivity extends Activity {
                 } else {
                     iniciarLogin();
                 }
+
             }
         }, 2500);
     }

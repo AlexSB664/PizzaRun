@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -23,18 +24,39 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity
-        implements CerrarSession.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener, Inicio.OnFragmentInteractionListener,Pago.OnFragmentInteractionListener, TusPedidos.OnFragmentInteractionListener,Promociones.OnFragmentInteractionListener,Ayuda.OnFragmentInteractionListener,TusFavoritos.OnFragmentInteractionListener,Configuracion.OnFragmentInteractionListener {
+        implements CerrarSession.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener, Inicio.OnFragmentInteractionListener,Pago.OnFragmentInteractionListener, TusPedidos.OnFragmentInteractionListener,Promociones.OnFragmentInteractionListener,Ayuda.OnFragmentInteractionListener,TusFavoritos.OnFragmentInteractionListener,Configuracion.OnFragmentInteractionListener,Ingredientes.OnFragmentInteractionListener {
 
     private static final String STRING_PREFERENCES = "ezegale.pizzaruneable";
     private static final String STRING_LINK= "NO";
+    private static final String STRING_USER= "";
     private Button mapa;
+
+    private TextView nombre ;
 
     public void GuardarURL(){
         SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES,MODE_PRIVATE);
 
-        preferences.edit().putString(STRING_LINK, "NO").apply();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            preferences.edit().putString(STRING_LINK, "NO").apply();
+        }
+    }
+
+    public String ObtenerUsuario(){
+        SharedPreferences preferences = getSharedPreferences(STRING_PREFERENCES, MODE_PRIVATE);
+        return preferences.getString(STRING_USER, "");
     }
 
     @Override
@@ -65,92 +87,52 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        /*ImageButton btnaceituna = (ImageButton) findViewById(R.id.BtnAceituna);
-        ImageButton btncebolla = (ImageButton) findViewById(R.id.BtnCebolla);
-        ImageButton btnchampinon = (ImageButton) findViewById(R.id.BtnChampiñon);
-        ImageButton btnchile = (ImageButton) findViewById(R.id.BtnChile);
-        ImageButton btnjamon = (ImageButton) findViewById(R.id.BtnJamon);
-        ImageButton btnpina = (ImageButton) findViewById(R.id.BtnPina);
-        ImageButton btnpeperoni = (ImageButton) findViewById(R.id.BtnPeperoni);
-        ImageButton btnqueso = (ImageButton) findViewById(R.id.BtnQueso);
-        ImageButton btnsalchicha = (ImageButton) findViewById(R.id.BtnSalchicha);
-        ImageButton btntocino = (ImageButton) findViewById(R.id.BtnTocino);
-        final ImageView aceituna = (ImageView) findViewById(R.id.imageView);
-        final ImageView cebolla = (ImageView) findViewById(R.id.imageView2);
-        final ImageView champinon = (ImageView) findViewById(R.id.imageView5);
-        final ImageView chile = (ImageView) findViewById(R.id.imageView7);
-        final ImageView jamon = (ImageView) findViewById(R.id.imageView6);
-        final ImageView pina = (ImageView) findViewById(R.id.imageView8);
-        final ImageView peperoni = (ImageView) findViewById(R.id.imageView4);
-        final ImageView queso = (ImageView) findViewById(R.id.imageView9);
-        final ImageView salchicha = (ImageView) findViewById(R.id.imageView10);
-        final ImageView tocino = (ImageView) findViewById(R.id.imageView11);
-        btnaceituna.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                aceituna.setVisibility(View.VISIBLE);
+        Fragment fragment = new Inicio();
+        getSupportFragmentManager().beginTransaction().replace(R.id.Contenedor,fragment).commit();
+
+        String UN = ObtenerUsuario();
+        nombre = (TextView) findViewById(R.id.nombreUsuario);
+        String linea = "";
+        try {
+            URL ul = new URL("http://pizzarun-17.000webhostapp.com/obtenerInfoUsuario.php?UrN=" + UN);
+            HttpURLConnection conexion = (HttpURLConnection) ul.openConnection();
+            try {
+                if (conexion.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
+                    String lineatemp = reader.readLine();
+                    //while (lineatemp != null){
+                    linea += lineatemp;
+                    // }
+
+                }
+            } catch (Exception e) {
+            } finally {
+                conexion.disconnect();
             }
-        });
-        btncebolla.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cebolla.setVisibility(View.VISIBLE);
-            }
-        });
-        btnchampinon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                champinon.setVisibility(View.VISIBLE);
-            }
-        });
-        btnchile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chile.setVisibility(View.VISIBLE);
-            }
-        });
-        btnaceituna.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                aceituna.setVisibility(View.VISIBLE);
-            }
-        });
-        btnjamon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                jamon.setVisibility(View.VISIBLE);
-            }
-        });
-        btnpina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pina.setVisibility(View.VISIBLE);
-            }
-        });
-        btnpeperoni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                peperoni.setVisibility(View.VISIBLE);
-            }
-        });
-        btnqueso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                queso.setVisibility(View.VISIBLE);
-            }
-        });
-        btnsalchicha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                salchicha.setVisibility(View.VISIBLE);
-            }
-        });
-        btntocino.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tocino.setVisibility(View.VISIBLE);
-            }
-        });*/
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //InfoUsuario ifUs = null;
+        //try {
+          //  if (linea!= ""){
+              //  JSONArray jsonObj = new JSONArray(linea);
+
+              //  for(int i = 0; i>jsonObj.length(); i++) {
+                   // JSONObject jsonOb = jsonObj.getJSONObject(i);
+                    //ifUs = new InfoUsuario();
+                    //ifUs.get_nombre(jsonOb.optString("nombre"));
+                   // nombre.setText(linea.toString());
+          //      }
+         //   }
+
+      //  }catch (Exception e){
+
+      //  }
+
+
+
     }
 
     @Override
@@ -208,7 +190,8 @@ public class MainActivity extends AppCompatActivity
             FragmentoSeleccionado =true;
             mapa.setVisibility(mapa.INVISIBLE);
         } else if (id == R.id.IdTusPedidos) {
-            fragment = new TusPedidos();
+            //fragment = new TusPedidos();
+            fragment = new Ingredientes();
             FragmentoSeleccionado =true;
             mapa.setVisibility(mapa.INVISIBLE);
         } else if (id == R.id.IdPromociones) {

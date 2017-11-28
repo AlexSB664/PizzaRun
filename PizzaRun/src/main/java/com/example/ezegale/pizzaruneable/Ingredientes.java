@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
-/**
+/**6646784885
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * {@link Ingredientes.OnFragmentInteractionListener} interface
@@ -25,9 +25,33 @@ public class Ingredientes extends Fragment  implements OnClickListener{
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    int VISIBLE = 0;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    View view;
+    ImageButton BtnChile;
+    ImageButton btnaceituna;
+    ImageButton btncebolla;
+    ImageButton btnchampinon;
+    ImageButton btnjamon;
+    ImageButton btnpina;
+    ImageButton btnpeperoni;
+    ImageButton btnqueso;
+    ImageButton btnsalchicha;
+    ImageButton btntocino;
+    ImageView aceituna;
+    ImageView cebolla;
+    ImageView champinon;
+    ImageView chile;
+    ImageView jamon;
+    ImageView pina;
+    ImageView peperoni;
+    ImageView queso;
+    ImageView salchicha;
+    ImageView tocino;
 
     private OnFragmentInteractionListener mListener;
 
@@ -36,6 +60,8 @@ public class Ingredientes extends Fragment  implements OnClickListener{
     public Ingredientes() {
         // Required empty public constructor
     }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -76,9 +102,47 @@ public class Ingredientes extends Fragment  implements OnClickListener{
     }*/
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_ingredientes, container, false);
-        Button upButton = (Button) view.findViewById(R.id.BtnChile);
-        upButton.setOnClickListener(this);
+        view = inflater.inflate(R.layout.fragment_ingredientes, container, false);
+        BtnChile = (ImageButton) view.findViewById(R.id.BtnChile);
+        BtnChile.setOnClickListener(this);
+
+        btnaceituna = (ImageButton) view.findViewById(R.id.BtnAceituna);
+        btnaceituna.setOnClickListener(this);
+
+        btncebolla = (ImageButton) view.findViewById(R.id.BtnCebolla);
+        btncebolla.setOnClickListener(this);
+
+        btnchampinon = (ImageButton) view.findViewById(R.id.BtnChampiñon);
+        btnchampinon.setOnClickListener(this);
+
+        btnjamon = (ImageButton) view.findViewById(R.id.BtnJamon);
+        btnjamon.setOnClickListener(this);
+
+        btnpina = (ImageButton) view.findViewById(R.id.BtnPina);
+        btnpina.setOnClickListener(this);
+
+        btnpeperoni = (ImageButton) view.findViewById(R.id.BtnPeperoni);
+        btnpeperoni.setOnClickListener(this);
+
+        btnqueso = (ImageButton) view.findViewById(R.id.BtnQueso);
+        btnqueso.setOnClickListener(this);
+
+        btnsalchicha = (ImageButton) view.findViewById(R.id.BtnSalchicha);
+        btnsalchicha.setOnClickListener(this);
+
+        btntocino = (ImageButton) view.findViewById(R.id.BtnTocino);
+        btntocino.setOnClickListener(this);
+
+        chile = view.findViewById(R.id.imageView7);
+        aceituna = view.findViewById(R.id.imageView);
+        cebolla = view.findViewById(R.id.imageView2);
+        champinon = view.findViewById(R.id.imageView5);
+        jamon = view.findViewById(R.id.imageView6);
+        pina = view.findViewById(R.id.imageView8);
+        peperoni = view.findViewById(R.id.imageView4);
+        queso = view.findViewById(R.id.imageView9);
+        salchicha = view.findViewById(R.id.imageView10);
+        tocino = view.findViewById(R.id.imageView11);
         return view;
     }
 
@@ -110,17 +174,36 @@ public class Ingredientes extends Fragment  implements OnClickListener{
     public void onClick(View v) {
             switch(v.getId()){
                 case R.id.BtnChile:
-                    ImageView chile = v.findViewById(R.id.imageView7);
-                    chile.setVisibility(View.VISIBLE);
-                    /** Do things you need to..
-                     fragmentTwo = new FragmentTwo();
+                    cambiarVisibilidad(chile);
+                break;
+                case R.id.BtnAceituna:
+                    cambiarVisibilidad(aceituna);
+                break;
+                case R.id.BtnCebolla:
+                    cambiarVisibilidad(cebolla);
+                break;
+                case R.id.BtnChampiñon:
+                    cambiarVisibilidad(champinon);
+                break;
+                case R.id.BtnJamon:
+                    cambiarVisibilidad(jamon);
+                break;
+                case R.id.BtnPina:
+                    cambiarVisibilidad(pina);
+                break;
+                case R.id.BtnPeperoni:
+                    cambiarVisibilidad(peperoni);
+                break;
+                case R.id.BtnQueso:
+                    cambiarVisibilidad(queso);
+                break;
+                case R.id.BtnSalchicha:
+                    cambiarVisibilidad(salchicha);
+                break;
+                case R.id.BtnTocino:
+                    this.cambiarVisibilidad(tocino);
+                break;
 
-                     fragmentTransaction.replace(R.id.frameLayoutFragmentContainer, fragmentTwo);
-                     fragmentTransaction.addToBackStack(null);
-
-                     fragmentTransaction.commit();
-                     */
-                    break;
             }
 
     }
@@ -140,6 +223,13 @@ public class Ingredientes extends Fragment  implements OnClickListener{
         void onFragmentInteraction(Uri uri);
     }
 
+    public void cambiarVisibilidad(ImageView image){
+        if(image.getVisibility()==View.INVISIBLE){
+            image.setVisibility(View.VISIBLE);
+        }else{
+            image.setVisibility(View.INVISIBLE);
+        }
+    }
 
 }
 

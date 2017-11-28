@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (error){
                     Toast.makeText(LoginActivity.this, "Compruebe los campos", Toast.LENGTH_SHORT).show();
                 }else {
-                   try {
+                  try {
                         ul = new URL("https://pizzarun-17.000webhostapp.com/LogIn.php?UrN=" +
                                 UN + "&PsW=" + UP);
 

@@ -31,8 +31,8 @@ public class TusPedidos extends Fragment implements  OnClickListener{
     private String mParam2;
 
     Fragment fragmentI;
-    FragmentManager fragmentManager = getFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
     Button upButton;
     View view;
 
@@ -89,6 +89,8 @@ public class TusPedidos extends Fragment implements  OnClickListener{
         switch(v.getId()){
             case R.id.realizar:
                 fragmentI = new Ingredientes();
+                fragmentManager = getFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.drawer_layout,fragmentI);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
