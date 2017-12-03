@@ -1,13 +1,149 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ezegale.pizzaruneable.Ayuda">
+    android:orientation="vertical"
+    tools:context="com.example.ezegale.menu.Ayuda">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Aquí va lo de Ayuda." />
+        android:id="@+id/TVPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pago"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="0dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/TVPago2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puedes administrar las opciones de pago de Pizzarun.\nLas opciones de pago son las siguientes:\n- Tarjetas de crédito\n- Tarjetas de crédito de prepago\n- Tarjetas de débito\n- Cuentas de PayPal"
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/TVConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuración"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVConf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Con esta opción tú puedes realizar todas las configuraciones de tú cuenta de Pizzarun"
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/TVPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promociones"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVPromo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En la opción de promociones te saldrán en hora real las últimas actualizaciones de las diversas promociones de las pizzerías cercanas a ti."
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/TVCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVCerrarSesion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Como su nombre lo indica esta opción es para cerrar la sesión actual que este logueada en el dispositivo."
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/TVTusPedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tus pedidos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVTusPedidos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aquí se genera un historial con las órdenes que hayas realizado anteriormente, está opción tiene el fin de darte comodidad en caso de que desees repetir algún pedido.."
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/TVInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVInicio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aquí se muestra el mapa que contiene las pizzerías cercanas a ti."
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/TVTusFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tus favoritos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/TVTusFavoritos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En está opción se muestran las pizzerías a las que más realizas pedidos."
+        android:textColor="@android:color/background_dark"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="160dp" />
+</LinearLayout>
