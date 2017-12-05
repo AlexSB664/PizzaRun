@@ -5,9 +5,36 @@
     tools:context="com.example.ezegale.pizzaruneable.Inicio">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="Mensajes"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Novedades"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="307dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="Ofertas en pizzerias nuevas, corre por ellas! Estan calientitas!"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
+    </LinearLayout>
 
 </FrameLayout>

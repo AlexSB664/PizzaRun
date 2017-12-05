@@ -5,9 +5,155 @@
     tools:context="com.example.ezegale.pizzaruneable.Configuracion">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Aquí va lo de Configuración." />
+        tools:context="com.example.ezegale.pizzaruneable.RegistroActivity"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:text="Nombre:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/nameNewUsertxtFra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:inputType="text"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:text="Usuario:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/usernameNewUsertxtFra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:text="Correo:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/emailNewUserTxtFra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:inputType="textEmailSubject"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:text="Contraseña:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/passwordNewUserTxtFra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:ems="10"
+                    android:fontFamily="casual"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:inputType="phone"
+                    android:text="Telefono:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/numeroUserNameTxtFra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:fontFamily="casual"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_Cambios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@android:color/holo_red_light"
+                    android:elevation="0dp"
+                    android:fontFamily="casual"
+                    android:text="Guardar"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Registrarse"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
 </FrameLayout>
